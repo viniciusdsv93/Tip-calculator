@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <img src="images/logo.svg" alt="">
+
+  <main>
+    <div class="container">
+
+      <div class="container-input">
+
+        <div class="input-bill">
+          <div class="bill-error">
+            <p>Bill</p>
+            <p class="error-message-bill hidden"></p>
+          </div>
+          <input id="bill-input" type="text" placeholder="0">
+          <img src="images/icon-dollar.svg" alt="">
+        </div>
+
+        <div class="input-tip">
+          <p>Select Tip %</p>
+          <div class="percent-buttons">
+            <button class="tip-button" value="5">5%</button>
+            <button class="tip-button" value="10">10%</button>
+            <button class="tip-button" value="15">15%</button>
+            <button class="tip-button" value="25">25%</button>
+            <button class="tip-button" value="50">50%</button>
+            <input id="button-custom" type="text" placeholder="Custom">
+          </div>
+        </div>
+
+        <div class="input-number-people">
+
+          <div class="number-people-error">
+            <p>Number of People</p>
+            <p class="error-message-people hidden">Can't be zero</p>
+          </div>
+          <input id="people-input" type="text" placeholder="0">
+          <img src="images/icon-person.svg" alt="">
+        
+        </div>
+      </div>
+
+      <div class="container-output">
+        <div class="container-output--values">
+
+          <div class="tip-amount">
+
+            <div class="top-amount-title">
+              <p>Tip Amount</p>
+              <span>/ person</span>
+            </div>
+
+            <div class="tip-amount-value">
+              $0.00
+            </div>
+
+          </div>
+
+          <div class="total">
+
+            <div class="total-title">
+              <p>Total</p>
+              <span>/ person</span>
+            </div>
+
+            <div class="total-value">
+              $0.00
+            </div>
+
+          </div>
+
+        </div>
+
+        <button id="reset-button">Reset</button>
+      </div>
+
+    </div>
+  </main>
+  
+  <div class="attribution">
+    <div>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.</div> 
+    <div>Coded by <a href="https://github.com/viniciusdsv93">Vinícius dos Santos Verissimo</a>.</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

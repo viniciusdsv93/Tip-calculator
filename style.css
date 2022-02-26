@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    height: max-content;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    background-color: hsl(185, 41%, 84%);
+    font-size: 14px;
+    font-family: 'Space Mono', monospace;
+    margin-top: 60px;
+}
+
+.container {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 30px;
+    height: auto;
+    display: flex;
+    max-width: 1000px;
+}
+
+.container-input {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+    padding-right: 40px;
+    flex: 1;
+}
+
+.input-bill,
+.input-number-people {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-bill img,
+.input-number-people img {
+    width: 12px;
+    margin-left: 8px;
+    position: relative;
+    top: -32px;
+    left: 5px;
+}
+
+.bill-error,
+.number-people-error {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.error-message-bill,
+.error-message-people {
+    color: rgb(194, 29, 29);
+}
+
+.hidden {
+    display: none !important;
+}
+
+input {
+    text-align: end;
+    padding: 6px 15px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    background-color: hsl(202, 50%, 97%);
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+    font-size: 24px;
+    
+}
+
+.input-correct {
+    outline: 2px solid hsl(172, 67%, 45%);
+}
+
+.input-wrong {
+    outline: 2px solid rgb(194, 29, 29);
+}
+
+::placeholder {
+    color: hsl(184, 14%, 56%);
+}
+
+.percent-buttons {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.percent-buttons button {
+    min-width: 120px;
+    border: none;
+    font-weight: 700;
+    font-size: 24px;
+    font-family: 'Space Mono', monospace;
+    color: hsl(0, 0%, 100%);
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;    
+}
+
+.percent-buttons button:hover {
+    background-color: hsl(173, 61%, 77%);
+    color: hsl(183, 100%, 15%);
+}
+
+.active {
+    background-color: hsl(172, 67%, 45%) !important;
+}
+
+#button-custom {
+    background-color: hsl(202, 50%, 97%);
+    color: hsl(186, 14%, 43%);
+    margin-top: 0;
+    max-width: 120px;
+}
+
+.container-output {
+    flex: 1;
+    border-radius: 15px;
+    padding: 30px;
+    background-color: hsl(183, 100%, 15%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-output--values p {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.container-output--values span {
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: 12px;
+}
+
+.tip-amount,
+.total {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 80px;
+}
+
+.tip-amount-value,
+.total-value {
+    font-size: 50px;
+    font-weight: 700;
+    color: hsl(172, 67%, 45%);
+}
+
+.container-output button {
+    text-transform: uppercase;
+    border: none;
+    background-color: hsl(183, 79%, 24%);
+    color: hsl(183, 100%, 15%);
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.container-output button:hover {
+    background-color: hsl(173, 61%, 77%);
+}
+
+
+
+.attribution {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution a {
+    font-weight: 700;
+    color: hsl(183, 100%, 15%);
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 880px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        flex-direction: column;
+        max-width: 460px;
+        width: 99vw;
+    }
+
+    .container-input {
+        padding-right: 0;
+        margin: 0 10px;
+        margin-bottom: 15px;
+    }
+
+    .tip-amount,
+    .total {
+        gap: 0;
+    }
+
+    .percent-buttons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #button-custom {
+        max-width: 185px;
+        min-width: 80px;
+    }
+}
